@@ -9,10 +9,10 @@
             Learn Anytime, Anywhere <br>
             <span> at HapoLearn <img src="{{ asset('images/icon-haposoft.png') }}" class="bg-img" alt="icon-hapo">!</span>
         </div>
-        <p class="slogan-second">
+        <div class="slogan-second">
             Interactive lessons, "on-the-go" <br>
             practice, peer support.
-        </p>
+        </div>
         <button class="button"> start learning now !</button>
     </div>
 </section>

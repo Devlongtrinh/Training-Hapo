@@ -25,15 +25,16 @@ $body-bg: #f8fafc;
 $gray: #505353;
 $white: #E2E2E2;
 $strong-blue: #11114e;
-$btn-shadow-color:#94af2b;
+$btn-shadow-color: #94af2b;
 
 .main-button {
-    background-color: $main-color;
-    border-color: $main-color;
-    border-radius: 1.5em;
-    padding: 0.5em 1.5em;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+  background-color: $main-color;
+  border-color: $main-color;
+  border-radius: 1.5em;
+  padding: 0.5em 1.5em;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 main {
   min-height: 54vh;
 }
