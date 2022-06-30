@@ -1,0 +1,151 @@
+.banner {
+  .bg-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  .content {
+    font-family: $font-family-UTM;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+
+    .slogan-first {
+      color: $strong-blue;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 61.3px;
+    }
+
+    .slogan-second {
+      color: $gray;
+      margin: 20px 0;
+      font-size: 20px;
+      line-height: 24.52px;
+    }
+
+    .button {
+      @extend .main-button;
+      text-transform: capitalize;
+      color: white;
+      font-weight: 700;
+      line-height: 1.7em;
+      font-size: 1.5em;
+      border: 0;
+      padding: 13px 67px 20px 67px;
+    }
+  }
+}
+
+.banner .slogan-first {
+  span {
+    font-weight: 700;
+  }
+}
+
+.bg-bottom-of-banner {
+  height: 161px;
+  background: $white;
+}
+
+@media (min-width: 770px) {
+  .banner {
+    position: relative;
+
+    .bg-banner {
+      background-image: url("/images/Hapo_Learn_banner.png");
+      padding-top: 45.486%;
+    }
+
+    .content {
+      position: absolute;
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 375px) {
+  .banner {
+    position: relative;
+
+    .bg-banner {
+      background-image: url("/images/Hapo_Learn_banner.png");
+      padding-top: 49.415%;
+    }
+
+    .content {
+      position: absolute;
+      left: 27px;
+
+      .slogan-first {
+        font-size: 30px;
+        line-height: 36.78px;
+      }
+
+      .slogan-second {
+        font-size: 16px;
+        line-height: 19.62px;
+      }
+
+      .button {
+        font-size: 16px;
+        line-height: 20px;
+        border: 0;
+        padding: 7.61px 34px 11.02px 36px;
+      }
+    }
+  }
+
+  .banner {
+    .content {
+      .slogan-first-img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+
+    .bg-banner {
+      background-image: url("/images/Hapo_Learn_banner.png");
+      padding-top: 45.558%;
+    }
+
+    .content {
+      margin: 110px 0 0 50px;
+      display: flex;
+      flex-direction: column;
+
+      .slogan-first {
+        font-size: 25px;
+        line-height: 31px;
+      }
+
+      .slogan-second {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .button {
+        font-size: 18px;
+        line-height: 22.07px;
+        border: 0.3px;
+        padding: 12px 52px;
+        align-self: center;
+        margin-left: -45px;
+      }
+    }
+  }
+
+  .banner {
+    .content {
+      .bg-img {
+        width: 34px;
+      }
+    }
+  }
+}
