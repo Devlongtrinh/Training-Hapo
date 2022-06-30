@@ -1,84 +1,84 @@
 .main-header {
-    border-bottom: 4px solid $white;
-    font-family: 'Open Sans';
+  border-bottom: 4px solid $white;
+  font-family: 'Open Sans';
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar-brand {
+  padding-left: 44px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  min-height: 54vh;
+}
+
+.nav-item {
+  border-radius: 17px;
+  overflow: hidden;
+  display: block;
+}
+
+.nav-item+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  padding: 5px 12px;
+  color: $gray;
+}
+
+.nav-item.active .nav-link {
+  background-color: $main-color;
+  color: white;
+}
+
+.logo-image {
+  transform: translateY(-6px);
+}
+
+@media (max-width: 1020px) and (min-width: 990px) {
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    padding-left: 11px;
+  }
+
+  .navbar-nav {
+    margin-right: 27px;
+  }
+
+  .logo-image {
+    width: 224px;
+    height: 51px;
+  }
+}
+
+@media (max-width: 439px) {
+  .logo-image {
+    width: 150px;
+    height: 27px;
   }
 
   .navbar {
     display: flex;
+    flex-wrap: nowrap;
   }
-
-  .navbar-brand {
-    padding-left: 44px;
-  }
-
-  .navbar-nav {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 60px;
-  }
-
-  .example {
-    display: flex;
-    align-items: center;
-    min-height: 54vh;
-  }
-
-  .nav-item {
-    border-radius: 17px;
-    overflow: hidden;
-    display: block;
-  }
-
-  .nav-item+.nav-item {
-    margin-left: 20px;
-  }
-
-  .nav-link {
-    text-transform: uppercase;
-    display: block;
-    font-weight: 700;
-    padding: 5px 12px;
-    color: $gray;
-  }
-
-  .nav-item.active .nav-link {
-    background-color: $main-color;
-    color: white;
-  }
-
-  .logo-image {
-    transform: translateY(-6px);
-  }
-
-  @media (max-width: 1020px) and (min-width: 990px) {
-    .nav-link {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .navbar-brand {
-      padding-left: 11px;
-    }
-
-    .navbar-nav {
-      margin-right: 27px;
-    }
-
-    .logo-image {
-      width: 224px;
-      height: 51px;
-    }
-  }
-
-  @media (max-width: 439px) {
-    .logo-image {
-      width: 150px;
-      height: 27px;
-    }
-
-    .navbar {
-      display: flex;
-      flex-wrap: nowrap;
-    }
-  }
+}
