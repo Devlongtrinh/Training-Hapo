@@ -127,7 +127,7 @@
     </div>
     <div class="course-footer">
         <span class="course-text">View all our course</span>
-        <i class="fa-solid fa-arrow-right-long"></i>
+        <i class="fas fa-arrow-right"></i>
     </div>
 </div>
 
