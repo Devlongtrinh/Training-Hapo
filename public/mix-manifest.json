@@ -1,11 +1,17 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
+    "/images/CSS.png": "/images/CSS.png",
+    "/images/Hapo_Learn_banner.png": "/images/Hapo_Learn_banner.png",
+    "/images/html.png": "/images/html.png",
+    "/images/icon-haposoft.png": "/images/icon-haposoft.png",
+    "/images/java.png": "/images/java.png",
+    "/images/laravel.png": "/images/laravel.png",
     "/images/logo.png": "/images/logo.png",
+    "/images/php.png": "/images/php.png",
+    "/images/rails.png": "/images/rails.png",
     "/fonts/utm_bryantlg-webfont.woff": "/fonts/utm_bryantlg-webfont.woff",
     "/fonts/utm_bryantlg-webfont.woff2": "/fonts/utm_bryantlg-webfont.woff2",
     "/fonts/UTM_BryantLG.ttf": "/fonts/UTM_BryantLG.ttf",
     "/fonts/UTM_BryantLG_B.ttf": "/fonts/UTM_BryantLG_B.ttf",
-    "/images/Hapo_Learn_banner.png": "/images/Hapo_Learn_banner.png",
-    "/images/icon-haposoft.png": "/images/icon-haposoft.png"
+    "/css/app.css": "/css/app.css"
 }
