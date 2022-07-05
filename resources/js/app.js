@@ -3,9 +3,11 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+// main.js
+import 'slick-carousel/slick/slick';
 
 require('./bootstrap');
-
+require('./feedback');
 window.Vue = require('vue').default;
 
 /**
