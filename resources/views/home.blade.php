@@ -127,7 +127,40 @@
     </div>
     <div class="course-footer">
         <span class="course-text">View all our course</span>
-        <i class="fas fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-right-long"></i>
+    </div>
+</div>
+
+<div class="container-fluid reason">
+    <div class="row why-container">
+        <div class="col-gl-6 col-xl-6 col-sm-7 col-md-7 col-xs-12 why-content">
+            <div class="why-heading">why hapoLearn?</div>
+            <div class="why-container-item">
+                <div class="why-item">
+                    <i class="far fa-check-circle"></i>
+                    <span>Interactive lessons, "on-the-go" practice, peer support.</span>
+                </div>
+                <div class="why-item">
+                    <i class="far fa-check-circle"></i>
+                    <span>Interactive lessons, "on-the-go" practice, peer support.</span>
+                </div>
+                <div class="why-item">
+                    <i class="far fa-check-circle"></i>
+                    <span>Interactive lessons, "on-the-go" practice, peer support.</span>
+                </div>
+                <div class="why-item">
+                    <i class="far fa-check-circle"></i>
+                    <span>Interactive lessons, "on-the-go" practice, peer support.</span>
+                </div>
+                <div class="why-item">
+                    <i class="far fa-check-circle"></i>
+                    <span>Interactive lessons, "on-the-go" practice, peer support.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-gl-6 col-xl-6 col-6 col-sm-5 col-md-5 col-xs-12 why-image">
+            <img class="col-12" src="{{ asset('images/Devices.png') }}" alt="...">
+        </div>
     </div>
 </div>
 
