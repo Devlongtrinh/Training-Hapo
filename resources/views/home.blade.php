@@ -16,7 +16,32 @@
         <button class="button"> start learning now !</button>
     </div>
 </section>
-<div class="bg-bottom-of-banner"></div>
+<div class="bg-bottom-of-banner">
+    <div class="container-mes">
+        <div class="messenger-show">
+            <div class="content active messenger-header" id="messenger">
+                <div class="content-detail">
+                    <img src="{{ asset('images/icon-haposoft.png') }}" alt="..." class="messenger-icon">
+                    <span>HapoLearn</span>
+                    <button type="button" class="jquery-messenger-btn close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                    <div class="messenger-content">HapoLearn xin chào bạn.<br>
+                        Bạn có cần chúng tôi hỗ trợ gì không?
+                    </div>
+                    <button type="button" class="messenger-btn-login btn btn-primary">
+                        <a class="messenger-link" href="#">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                            Đăng nhập vào Messenger
+                        </a>
+                    </button>
+                    <a class="chat" href="#">Chat với HapoLearn trong Messenger</a>
+                </div>
+            </div>
+            <button class="btn btn-primary jquery-messenger-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+        </div>
+    </div>
+</div>
 
 <div class="container main">
     <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-xl-3 g-4">
