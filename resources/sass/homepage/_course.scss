@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $dark-slate-blue;
+    background-color: #3F6185;
     height: 40%;
   }
 
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $orange;
+    background-color: #DC594C;
     height: 40%;
   }
 
@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $ocean-blue;
+    background-color: #556598;
     height: 40%;
   }
 
@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $sky-blue;
+    background-color: #24ABE2;
     height: 40%;
   }
 
@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $special-orange;
+    background-color: #E14E40;
     height: 40%;
   }
 
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $ocean-blue;
+    background-color: #1B75BB;
     height: 40%;
   }
 
@@ -97,9 +97,9 @@
   margin: 30px auto;
   border-bottom: 5px solid $main-color;
   width: 50%;
-  font-family: $font-family-UTM;
+  font-family: 'UTM BryantLG';
   font-weight: 800;
-  color: $strong-blue;
+  color: #11114E;
 }
 
 .other-courses {
@@ -116,10 +116,10 @@
   text-transform: capitalize;
 
   .course-text {
-    font-family: $font-family-UTM;
+    font-family: 'UTM BryantLG';
   }
 
-  .fa-arrow-right {
+  .fa-arrow-right-long {
     width: 47.09px;
     transform: translateY(8px);
   }
