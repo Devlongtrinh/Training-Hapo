@@ -131,7 +131,7 @@
     </div>
 </div>
 
-<div class="container why-hapolearn">
+<div class="container-fluid reason">
     <div class="row why-container">
         <div class="col-gl-6 col-xl-6 col-sm-7 col-md-7 col-xs-12 why-content">
             <div class="why-heading">why hapoLearn?</div>
@@ -159,7 +159,7 @@
             </div>
         </div>
         <div class="col-gl-6 col-xl-6 col-6 col-sm-5 col-md-5 col-xs-12 why-image">
-            <img class="col-12" src="{{ asset('images/Devices.png') }}" alt="image-devices">
+            <img class="col-12" src="{{ asset('images/Devices.png') }}" alt="...">
         </div>
     </div>
 </div>
