@@ -1,7 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/images/bg-become.png": "/images/bg-become.png",
+    "/images/avatar-user.png": "/images/avatar-user.png",
     "/images/bg-why.png": "/images/bg-why.png",
     "/images/CSS.png": "/images/CSS.png",
     "/images/Devices.png": "/images/Devices.png",
@@ -11,11 +11,12 @@
     "/images/java.png": "/images/java.png",
     "/images/laravel.png": "/images/laravel.png",
     "/images/logo.png": "/images/logo.png",
-    "/images/logo_hapo_white.png": "/images/logo_hapo_white.png",
     "/images/php.png": "/images/php.png",
     "/images/rails.png": "/images/rails.png",
     "/fonts/utm_bryantlg-webfont.woff": "/fonts/utm_bryantlg-webfont.woff",
     "/fonts/utm_bryantlg-webfont.woff2": "/fonts/utm_bryantlg-webfont.woff2",
     "/fonts/UTM_BryantLG.ttf": "/fonts/UTM_BryantLG.ttf",
-    "/fonts/UTM_BryantLG_B.ttf": "/fonts/UTM_BryantLG_B.ttf"
+    "/fonts/UTM_BryantLG_B.ttf": "/fonts/UTM_BryantLG_B.ttf",
+    "/images/bg-become.png": "/images/bg-become.png",
+    "/images/logo_hapo_white.png": "/images/logo_hapo_white.png"
 }
