@@ -4,10 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 // main.js
-import $ from 'jquery'
-import 'slick-carousel'
-
-window.jQuery = window.$ = $;
+import 'slick-carousel/slick/slick';
 
 require('./bootstrap');
 require('./feedback');

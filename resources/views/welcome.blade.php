@@ -9,8 +9,8 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Styles -->
+    
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
         html {
