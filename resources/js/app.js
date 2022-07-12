@@ -7,6 +7,7 @@
 import 'slick-carousel/slick/slick';
 
 require('./bootstrap');
+require('./messenger');
 require('./feedback');
 window.Vue = require('vue').default;
 

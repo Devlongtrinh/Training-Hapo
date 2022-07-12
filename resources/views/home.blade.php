@@ -16,30 +16,28 @@
         <button class="button"> start learning now !</button>
     </div>
 </section>
-<div class="bg-bottom-of-banner">
-    <div class="container-mes">
-        <div class="messenger-show">
-            <div class="content active messenger-header" id="messenger">
-                <div class="content-detail">
-                    <img src="{{ asset('images/icon-haposoft.png') }}" alt="..." class="messenger-icon">
-                    <span>HapoLearn</span>
-                    <button type="button" class="jquery-messenger-btn close">
-                        <span aria-hidden="true"></span>
-                    </button>
-                    <div class="messenger-content">HapoLearn xin chào bạn.<br>
-                        Bạn có cần chúng tôi hỗ trợ gì không?
-                    </div>
-                    <button type="button" class="messenger-btn-login btn btn-primary">
-                        <a class="messenger-link" href="#">
-                            <i class="fa-brands fa-facebook-messenger"></i>
-                            Đăng nhập vào Messenger
-                        </a>
-                    </button>
-                    <a class="chat" href="#">Chat với HapoLearn trong Messenger</a>
+<div class="container-display">
+    <div class="message-display">
+        <div class="content active modal-header" id="message">
+            <div class="content-detail">
+                <img src="{{ asset('images/icon-haposoft.png') }}" alt="message-icon" class="message-icon">
+                <span>HapoLearn</span>
+                <button type="button" class="message-btn close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="message-content">HapoLearn xin chào bạn.<br>
+                    Bạn có cần chúng tôi hỗ trợ gì không?
                 </div>
+                <button type="button" class="message-btn-login btn btn-primary" data-dismiss="modal">
+                    <a class="message-link" href="#">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                        Đăng nhập vào Messenger
+                    </a>
+                </button>
+                <a class="chat" href="#">Chat với HapoLearn trong Messenger</a>
             </div>
-            <button class="btn btn-primary jquery-messenger-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
         </div>
+        <button class="btn btn-primary message-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
     </div>
 </div>
 
