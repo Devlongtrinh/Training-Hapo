@@ -23,7 +23,7 @@
                 <img src="{{ asset('images/icon-haposoft.png') }}" alt="message-icon" class="message-icon">
                 <span>HapoLearn</span>
                 <button type="button" class="message-btn close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times</span>
                 </button>
                 <div class="message-content">HapoLearn xin chào bạn.<br>
                     Bạn có cần chúng tôi hỗ trợ gì không?
@@ -40,7 +40,7 @@
         <button class="btn btn-primary message-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
     </div>
 </div>
-
+<div class="bg-bottom-of-banner"></div>
 <div class="container main">
     <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-1 row-cols-xl-3 g-4">
         <div class="col">
