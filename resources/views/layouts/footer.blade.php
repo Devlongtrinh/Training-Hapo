@@ -4,7 +4,7 @@
             <div class="row mt-3 footer-item">
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4 footer-brand">
                     <a class="footer-logo" href="#">
-                        <img class="logo-image" src="{{ asset('images/logo-hapo-white.png') }}" alt="...">
+                        <img class="logo-image" src="{{ asset('images/logo_hapo_white.png') }}" alt="...">
                     </a>
                     <p class="brand-description">
                         Interactive lessons, "on-the-go" <br>practive, peerm support
