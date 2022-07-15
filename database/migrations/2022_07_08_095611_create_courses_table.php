@@ -16,6 +16,7 @@ class CreateCoursesTable extends Migration
         if (!Schema::hasTable('courses')) {
             Schema::create('courses', function (Blueprint $table) {
                 $table->increments('id');
+                $table->text('course_name');
                 $table->longText('description')->nullable();
                 $table->float('cost')->nullable();
                 $table->text('status')->nullable();

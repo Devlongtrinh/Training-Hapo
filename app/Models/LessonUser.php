@@ -10,18 +10,10 @@ class LessonUser extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'lesson_user';
+
     protected $fillable = [
         'lesson_id',
         'user_id',
     ];
-
-    public function lesson()
-    {
-        return $this->belongsTo(Lesson::class);
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }

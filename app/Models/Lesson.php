@@ -15,7 +15,7 @@ class Lesson extends Model
         'tag',
         'time',
         'cost',
-        'documents',
+        'document',
     ];
 
     public function course()

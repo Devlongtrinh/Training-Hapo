@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use DateTime;
 
 class UserFactory extends Factory
 {
@@ -26,11 +27,15 @@ class UserFactory extends Factory
             'user_name' => $this->faker->userName(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => bcrypt('123456'), // password
-            'role' => $this->faker->numberBetween(0, 2),
+            'password' => $this->faker->password(),
+            'role' => $this->faker->numberBetween(0, 1),
             'name' => $this->faker->name(),
-            'd_o_b' => $this->faker->unixTime(),
+            'd_o_b' => $this->faker->date('Y-m-d', $max = 'now'),
+            'phone' => $this->faker->phoneNumber(),
+            'address' => $this->faker->address(),
             'remember_token' => Str::random(10),
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
         ];
     }
 
