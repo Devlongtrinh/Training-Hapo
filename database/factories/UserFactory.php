@@ -30,7 +30,7 @@ class UserFactory extends Factory
             'password' => $this->faker->password(),
             'role' => $this->faker->numberBetween(0, 1),
             'name' => $this->faker->name(),
-            'd_o_b' => $this->faker->date('Y-m-d', $max = 'now'),
+            'd_o_b' => $this->faker->date('Y-m-d'),
             'phone' => $this->faker->phoneNumber(),
             'address' => $this->faker->address(),
             'remember_token' => Str::random(10),
