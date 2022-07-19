@@ -11,7 +11,7 @@ class Course extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'course_name',
+        'name',
         'description',
         'cost',
         'status',
@@ -29,7 +29,7 @@ class Course extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsToMany(User::class);
     }
 
     public function tags()

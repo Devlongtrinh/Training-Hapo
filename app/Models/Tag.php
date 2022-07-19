@@ -11,11 +11,12 @@ class Tag extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'tag_name',
+        'course_id',
+        'name',
     ];
 
     public function courses()
     {
-        return $this->belongsToMany(Course::class)->withTimestamps();
+        return $this->belongsToMany(Course::class);
     }
 }

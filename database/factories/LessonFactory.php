@@ -15,7 +15,7 @@ class LessonFactory extends Factory
     public function definition()
     {
         return [
-            'course_id' => $this->faker->numberBetween(0, 50),
+            'course_id' => $this->faker->numberBetween(0, 100),
             'name' => $this->faker->name(),
             'description' => $this->faker->text(100),
             'tag' => $this->faker->word(),

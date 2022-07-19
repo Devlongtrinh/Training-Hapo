@@ -16,7 +16,8 @@ class DocumentFactory extends Factory
     {
         return [
             'lesson_id' => $this->faker->randomElement(Lesson::pluck('id')),
-            'document_name' => $this->faker->word,
+            'name' => $this->faker->word,
+            'type' => $this->faker->word,
             'created_at' => $this->faker->date(),
             'updated_at' => $this->faker->date()
         ];

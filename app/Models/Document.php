@@ -11,7 +11,8 @@ class Document extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'document_name',
+        'name',
+        'type'
     ];
 
     public function lesson()

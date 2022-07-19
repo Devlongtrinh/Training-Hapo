@@ -17,7 +17,7 @@ class CourseFactory extends Factory
     public function definition()
     {
         return [
-            'course_name' => $this->faker->word(),
+            'name' => $this->faker->word(),
             'description' => $this->faker->text(100),
             'cost' => $this->faker->numberBetween(1000, 9000),
             'status' => $this->faker->numberBetween(0, 2),
