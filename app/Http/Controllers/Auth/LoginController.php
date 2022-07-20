@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -40,7 +41,7 @@ class LoginController extends Controller
     {
         $credentials = $request->only(['user_name', 'password']);
 
-        if (Auth::attempt($credentials)) {  
+        if (Auth::attempt($credentials)) {
             return redirect('/')->with('success', __('message.login_success'));
         }
 
