@@ -24,7 +24,7 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_name' => 'required|min:6|alpha_dash',
+            'user_name' => 'required|max:50|alpha_dash',
             'password' => 'required|min:6',
         ];
     }
@@ -33,7 +33,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'user_name.required' => __('message.user_name_required'),
-            'user_name.min' => __('message.user_name_min'),
+            'user_name.max' => __('message.user_name_max'),
             'user_name.alpha_dash' => __('message.user_name_alpha_dash'),
             'password.required' => __('message.password_required'),
             'password.min' => __('message.password_min'),
