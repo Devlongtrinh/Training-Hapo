@@ -19,7 +19,8 @@
                             @csrf
 
                             <div class="form-group">
-                                <label for="username" class="col-md-12 col-form-label text-md-left"> {{ __('artribute.user_name') }} </label>
+                                <label for="username" class="col-md-12 col-form-label text-md-left">
+                                    {{ __('artribute.user_name') }} </label>
 
                                 <div class="col-md-12">
                                     <input id="username" type="text"
@@ -35,8 +36,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password"
-                                    class="col-md-12 col-form-label text-md-left"> {{ __('artribute.Password') }} </label>
+                                <label for="password" class="col-md-12 col-form-label text-md-left">
+                                    {{ __('artribute.Password') }} </label>
 
                                 <div class="col-md-12">
                                     <input id="password" type="password"
