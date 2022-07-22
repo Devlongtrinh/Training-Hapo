@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto w-100">
                 <li class="nav-item">
-                    <a class="nav-link" href="home">Home</a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">All Courses</a>
@@ -27,6 +27,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="profile">Profile</a>
                 </li>
+                @if (Auth::check())
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <li class="nav-item ">
+                            <button class="btn btn-danger">LOGOUT</button>
+                        </li>
+                    </form>
+                @endif
             </ul>
         </div>
     </nav>

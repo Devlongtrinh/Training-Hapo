@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Session;
 use App\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
@@ -46,5 +47,12 @@ class LoginController extends Controller
         }
 
         return redirect()->back()->with('error', __('message.login_error'));
+    }
+
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect('login');
     }
 }

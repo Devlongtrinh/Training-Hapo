@@ -11,9 +11,14 @@ return [
     |
     */
 
-  'login_error' => 'username or password is incorrect',
-  'login_success' => 'successful login !',
-  'register_success' => 'You have successfully registered',
-  'register_error' => 'Registration failed',
-  'logout_success' => 'You have successfully logouted',
+  'user_name' => 'Tên đăng nhập',
+  'password' => 'Mật khẩu',
+  'password_confirm' => 'Xác nhận mật khẩu',
+  'notification' => 'Thông báo',
+  'sign_up' => 'Đăng ký',
+  'sign_in' => 'Đăng nhập',
+  'forgot_password' => 'Quên mật khẩu',
+  'create_new_account' => 'Tạo tài khoản',
+  'sign_up_hapolearn' => 'Đăng ký tài khoản HapoLearn',
+  'sign_in_hapolearn' => 'Đăng nhập tài khoản HapoLearn'
 ];
