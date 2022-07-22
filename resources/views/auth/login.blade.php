@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card card-login">
-                    <div class="card-title">Sign in to HapoLearn</div>
+                    <div class="card-title">{{ __('artribute.sign_in_hapolearn') }}</div>
 
                     <div class="card-login-body">
                         <section class="message-error">
@@ -19,7 +19,7 @@
                             @csrf
 
                             <div class="form-group">
-                                <label for="username" class="col-md-12 col-form-label text-md-left">Username</label>
+                                <label for="username" class="col-md-12 col-form-label text-md-left"> {{ __('artribute.user_name') }} </label>
 
                                 <div class="col-md-12">
                                     <input id="username" type="text"
@@ -36,7 +36,7 @@
 
                             <div class="form-group">
                                 <label for="password"
-                                    class="col-md-12 col-form-label text-md-left">{{ __('Password') }}</label>
+                                    class="col-md-12 col-form-label text-md-left"> {{ __('artribute.Password') }} </label>
 
                                 <div class="col-md-12">
                                     <input id="password" type="password"

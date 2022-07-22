@@ -17,6 +17,5 @@ return [
     'password_confirm_same' => ':attribute chưa đúng',
     'register_success' => 'Đăng ký thành công, HapoLearn xin chào!!!',
     'register_error' => 'Đăng ký không thành công!',
-    'log_in' => 'Sign up',
-    'register_title' => 'Sign up to HapoLearn'
+    'logout_success' => 'Bạn đã đăng xuất thành công!',
 ];

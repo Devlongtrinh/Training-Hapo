@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-7">
                 <div class="card card-login">
-                    <div class="card-title">{{ __('message.register_title') }}</div>
+                    <div class="card-title">{{ __('artribute.sign_up_hapolearn') }}</div>
 
                     <div class="card-login-body">
                         <form method="POST" action="{{ route('register') }}">
@@ -17,7 +17,7 @@
                             @endif
                             <div class="form-group">
                                 <label for="username"
-                                    class="col-md-12 col-form-label text-md-left">{{ __('Username') }}</label>
+                                    class="col-md-12 col-form-label text-md-left">{{ __('artribute.user_name') }}</label>
 
                                 <div class="col-md-12">
                                     <input id="username" type="text"
@@ -34,7 +34,7 @@
 
                             <div class="form-group">
                                 <label for="email"
-                                    class="col-md-12 col-form-label text-md-left">{{ __('Email') }}</label>
+                                    class="col-md-12 col-form-label text-md-left">{{ __('artribute.email') }}</label>
 
                                 <div class="col-md-12">
                                     <input id="email" type="email"
@@ -51,7 +51,7 @@
 
                             <div class="form-group">
                                 <label for="password"
-                                    class="col-md-12 col-form-label text-md-left">{{ __('Password') }}</label>
+                                    class="col-md-12 col-form-label text-md-left">{{ __('artribute.password') }}</label>
 
                                 <div class="col-md-12">
                                     <input id="password" type="password"
@@ -68,7 +68,7 @@
 
                             <div class="form-group">
                                 <label for="password-confirm"
-                                    class="col-md-12 col-form-label text-md-left">{{ __('Confirm Password') }}</label>
+                                    class="col-md-12 col-form-label text-md-left">{{ __('artribute.password_confirm') }}</label>
 
                                 <div class="col-md-12">
                                     <input id="password-confirm" type="password"
@@ -86,7 +86,7 @@
                             <div class="form-group">
                                 <div class="offset-md-4 col-md-12 col-xs-4 col-sm-4 col-xl-8 col-lg-8">
                                     <button type="submit" class="btn btn-primary btn-main col-md-4 col-lg-7 btn-register">
-                                        {{ __('message.log_in') }}
+                                        {{ __('artribute.sign_in') }}
                                     </button>
                                 </div>
                             </div>

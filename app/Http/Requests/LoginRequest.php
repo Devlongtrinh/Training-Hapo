@@ -32,11 +32,11 @@ class LoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'user_name.required' => __('message.user_name_required'),
-            'user_name.max' => __('message.user_name_max'),
-            'user_name.alpha_dash' => __('message.user_name_alpha_dash'),
-            'password.required' => __('message.password_required'),
-            'password.min' => __('message.password_min'),
+            'user_name.required' => __('message_vi.user_name_required'),
+            'user_name.max' => __('message_vi.user_name_max'),
+            'user_name.alpha_dash' => __('message_vi.user_name_alpha_dash'),
+            'password.required' => __('message_vi.password_required'),
+            'password.min' => __('message_vi.password_min'),
         ];
     }
 

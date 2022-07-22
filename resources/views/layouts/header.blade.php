@@ -16,24 +16,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto w-100">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="home">Home</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#">All Courses</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login">Login/Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="profile">Profile</a>
-                </li>
                 @if (Auth::check())
+                    <li class="nav-item ">
+                        <a class="nav-link" href="profile">Profile</a>
+                    </li>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <li class="nav-item ">
-                            <button class="btn btn-danger">LOGOUT</button>
+                            <button class="btn btn-danger"><a class="nav-link" href="home">Logout</a></button>
                         </li>
                     </form>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="login">Login/Register</a>
+                    </li>
                 @endif
             </ul>
         </div>

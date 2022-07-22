@@ -56,7 +56,7 @@ class RegisterController extends Controller
 
         if ($user) {
             Auth::login($user);
-            return redirect('/')->route('home')->with('success', __('message.register_success'));
+            return redirect('/')->with('success', __('message.register_success'));
         }
 
         return redirect()->back()->with('error', __('message.register_error'));
