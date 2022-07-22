@@ -43,16 +43,16 @@ class LoginController extends Controller
         $credentials = $request->only(['user_name', 'password']);
 
         if (Auth::attempt($credentials)) {
-            return redirect('/')->with('success', __('message_vi.login_success'));
+            return redirect('/')->with('success', __('message.login_success'));
         }
 
-        return redirect()->back()->with('error', __('message_vi.login_error'));
+        return redirect()->back()->with('error', __('message.login_error'));
     }
 
     public function logout()
     {
         Session::flush();
         Auth::logout();
-        return redirect('login');
+        return redirect('home');
     }
 }

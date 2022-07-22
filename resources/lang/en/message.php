@@ -13,7 +13,7 @@ return [
 
   'login_error' => 'username or password is incorrect',
   'login_success' => 'successful login !',
-  'register_success' => 'You have successfully registered',
+  'register_success' => 'You have successfully registered, Welcome to HapoLearn',
   'register_error' => 'Registration failed',
   'logout_success' => 'You have successfully logouted',
 ];

@@ -86,7 +86,7 @@
                             <div class="form-group">
                                 <div class="offset-md-4 col-md-12 col-xs-4 col-sm-4 col-xl-8 col-lg-8">
                                     <button type="submit" class="btn btn-primary btn-main col-md-4 col-lg-7 btn-register">
-                                        {{ __('artribute.sign_in') }}
+                                        {{ __('artribute.sign_up') }}
                                     </button>
                                 </div>
                             </div>

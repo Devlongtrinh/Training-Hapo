@@ -37,7 +37,7 @@
 
                             <div class="form-group">
                                 <label for="password" class="col-md-12 col-form-label text-md-left">
-                                    {{ __('artribute.Password') }} </label>
+                                    {{ __('artribute.password') }} </label>
 
                                 <div class="col-md-12">
                                     <input id="password" type="password"
@@ -55,13 +55,13 @@
                             <div class="form-group row mb-0">
                                 <div class="col-md-12 login-submit row">
                                     <button type="submit" class="btn btn-primary btn-main col-md-4 col-lg-7 btn-sign-in">
-                                        {{ __('Sign in') }}
+                                        {{ __('artribute.sign_in') }}
                                     </button>
 
                                     @if (Route::has('password.request'))
                                         <a
                                             class="btn btn-link col-md-6 col-lg-4 link-forgot-password"{{ route('password.request') }}">
-                                            {{ __('Forgot Password?') }}
+                                            {{ __('artribute.forgot_password') }}
                                         </a>
                                     @endif
                                 </div>
@@ -70,7 +70,7 @@
                         <div class="sign-in-with">
                             <div class="row text">
                                 <div class="col-lg-4 col-md-3 line"></div>
-                                <div class="col-lg-4 col-md-6 content-text">Sign in with</div>
+                                <div class="col-lg-4 col-md-6 content-text">{{ __('artribute.sign_in_with') }}</div>
                                 <div class="col-lg-4 col-md-3 line"></div>
                             </div>
                             <div class="btn btn-primary col-md-11 btn-google">
@@ -83,11 +83,11 @@
                         <div class="sign-in-with">
                             <div class="row text">
                                 <div class="col-lg-3 col-md-2 line"></div>
-                                <div class="col-lg-6 col-md-8 content-text">or New to Hapolearn</div>
+                                <div class="col-lg-6 col-md-8 content-text">{{ __('artribute.or_new_to_hapolearn') }}</div>
                                 <div class="col-lg-3 col-md-2 line"></div>
                             </div>
                             <div class="btn btn-primary btn-main col-md-11 btn-login-create">
-                                <a href="register" class="btn-create">create new account</a>
+                                <a href="register" class="btn-create">{{ __('artribute.create_new_account') }}</a>
                             </div>
                         </div>
                     </div>
