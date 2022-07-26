@@ -33,6 +33,7 @@ class UserFactory extends Factory
             'd_o_b' => $this->faker->date('Y-m-d'),
             'phone' => $this->faker->phoneNumber(),
             'address' => $this->faker->address(),
+            'avater' => $this->faker->imageUrl(50, 50),
             'remember_token' => Str::random(10),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime()

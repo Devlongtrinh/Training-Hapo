@@ -12,6 +12,7 @@ class Course extends Model
 
     protected $fillable = [
         'name',
+        'image',
         'description',
         'cost',
         'status',
@@ -35,5 +36,15 @@ class Course extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class)->withTimestamps();
+    }
+
+    public function scopeMain($query)
+    {
+        return $query->take(config('course.main_course_num'));
+    }
+
+    public function scopeOther($query)
+    {
+        return $query->orderBy('id', config('course.sort_descending'))->take(config('course.other_course_num'));
     }
 }

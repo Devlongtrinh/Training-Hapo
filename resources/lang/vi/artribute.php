@@ -28,5 +28,6 @@ return [
   'or_new_to_hapolearn' => 'Hoặc bắt đầu mới với Hapolearn',
   'create_new_account' => 'Tạo tài khoản mới',
   'sign_up_hapolearn' => 'Đăng ký tài khoản HapoLearn',
-  'sign_in_hapolearn' => 'Đăng nhập tài khoản HapoLearn'
+  'sign_in_hapolearn' => 'Đăng nhập tài khoản HapoLearn',
+  'take_this_course' => 'Nhận khóa học này'
 ];

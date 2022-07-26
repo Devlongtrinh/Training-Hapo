@@ -18,12 +18,12 @@ class HomeController extends Controller
     public function index()
     {
         $mainCourses = Course::main()->get();
-        $otherCourses = Course::other()->orderBy('id', config('course.course_sort_descending'))->get();
+        $otherCourses = Course::other()->get();
         $reviews = Review::get();
-        $countCourses = Course::count();
-        $countLessons = Lesson::count();
-        $countLearners = CourseUser::countRegistered()->Learners();
+        $countCourse = Course::count();
+        $countLesson = Lesson::count();
+        $learners = CourseUser::learners();
 
-        return view('home', compact('mainCourses', 'otherCourses', 'reviews', 'learners', 'countCourse', 'countLession'));
+        return view('home', compact('mainCourses', 'otherCourses', 'reviews', 'countCourses', 'countLessons', 'learners'));
     }
 }
