@@ -148,11 +148,11 @@
                                         </div>
                                     </div>
                                     <div class="row user-comment">
-                                        <img src="{{ asset('images/avatar-user.png') }}" class="user-avatar"
-                                            alt="...">
+                                        <img src="{{ $review->user->avatar }}" class="user-avatar" alt="...">
                                         <div class="feedback-user-info col-8">
                                             <div class="user-name">{{ $review->user->user_name }}</div>
                                             <div class="user-category">{{ $review->course->name }}</div>
+                                            <div class="user-language">{{ $review->language }}</div>
                                             <div class="user-rate">
                                                 @for ($i = 0; $i < $review->rate; $i++)
                                                     <i class="fa-solid fa-star user-star-icon"></i>
@@ -183,19 +183,19 @@
                 <div class="col">
                     <div class="h-100 list-item">
                         <div class="list-title">courses</div>
-                        <div class="list-data">{{ $countCourse }}</div>
+                        <div class="list-data">{{ number_format($countCourse) }}</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="h-100 list-item">
                         <div class="list-title">lessons</div>
-                        <div class="list-data">{{ $countLesson }}</div>
+                        <div class="list-data">{{ number_format($countLesson) }}</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="h-100 list-item">
                         <div class="list-title">learners</div>
-                        <div class="list-data">{{ $learners }}</div>
+                        <div class="list-data">{{ number_format($learners) }}</div>
                     </div>
                 </div>
             </div>
