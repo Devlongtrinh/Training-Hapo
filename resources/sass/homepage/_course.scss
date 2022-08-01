@@ -9,55 +9,6 @@
 .card {
   box-shadow: 0px 0px 10px 0px #00000040;
 
-  .card-img-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $dark-slate-blue;
-    height: 40%;
-    overflow: hidden;
-  }
-
-  .card-img-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $orange;
-    height: 40%;
-  }
-
-  .card-img-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $ocean-blue;
-    height: 40%;
-  }
-
-  .card-img-left-bot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $sky-blue;
-    height: 40%;
-  }
-
-  .card-img-center-bot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $special-orange;
-    height: 40%;
-  }
-
-  .card-img-right-bot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $ocean-blue;
-    height: 40%;
-  }
-
   .card-body {
     text-align: center;
 
