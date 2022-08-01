@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\Lesson;
 use App\Models\CourseUser;
@@ -22,7 +21,7 @@ class HomeController extends Controller
         $reviews = Review::get();
         $countCourse = Course::count();
         $countLesson = Lesson::count();
-        $learners = CourseUser::learners();
+        $learners = CourseUser::learners()->count();
 
         return view('home', compact('mainCourses', 'otherCourses', 'reviews', 'countCourse', 'countLesson', 'learners'));
     }
