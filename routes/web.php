@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/course', [CourseController::class, 'index'])->name('course');
 Route::get('/profile', [UserController::class, 'profile'])->name('profile')->middleware('auth');
