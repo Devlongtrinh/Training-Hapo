@@ -40,11 +40,11 @@ class Course extends Model
 
     public function scopeMain($query)
     {
-        return $query->take(config('course_list.main_course_num'));
+        return $query->take(config('course_home.main_course_num'));
     }
 
     public function scopeOther($query)
     {
-        return $query->orderBy('id', config('course_list.sort_descending'))->take(config('course_list.other_course_num'));
+        return $query->orderBy('id', config('course_home.sort_descending'))->take(config('course_home.other_course_num'));
     }
 }

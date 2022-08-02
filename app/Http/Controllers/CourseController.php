@@ -2,13 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
+use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
-    public function course()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
     {
-        return view('course');
+        $data = $request->all();
+        $teachers = User::teachers()->get();
+        $tags = Tag::all();
+        $courses = Course::search($data)->paginate(config('course.paginate'));
+
+        return view('course', compact('teachers', 'tags', 'courses', 'data'));
     }
 }

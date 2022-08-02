@@ -15,11 +15,11 @@
                       <div class="row">
                           <div class="col-4 footer-course-item">
                               <div class="list-title">learners</div>
-                              <div class="list-data">{{ number_format($course->learners) }}</div>
+                              <div class="list-data">{{ number_format($learners) }}</div>
                           </div>
                           <div class="col-4 footer-course-item">
                               <div class="list-title">lessons</div>
-                              <div class="list-data">{{ number_format($course->lessons) }}</div>
+                              <div class="list-data">{{ number_format($countLessons) }}</div>
                           </div>
                           <div class="col-4 footer-course-item">
                               <div class="list-title">times</div>
