@@ -9,63 +9,33 @@
 .card {
   box-shadow: 0px 0px 10px 0px #00000040;
 
-  .card-img-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $dark-slate-blue;
-    height: 40%;
-  }
-
-  .card-img-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $orange;
-    height: 40%;
-  }
-
-  .card-img-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $ocean-blue;
-    height: 40%;
-  }
-
-  .card-img-left-bot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $sky-blue;
-    height: 40%;
-  }
-
-  .card-img-center-bot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $special-orange;
-    height: 40%;
-  }
-
-  .card-img-right-bot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $ocean-blue;
-    height: 40%;
+  .card-img-top {
+    width: 100%;
   }
 
   .card-body {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 
-    .card-title {
-      color: $main-color;
+    .card-top {
+      .card-title {
+        margin-left: 20%;
+        color: $main-color;
+        max-width: 20ch;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+
+      .card-text {
+        margin: 1em;
+      }
     }
 
-    .card-text {
-      margin: 1em;
+    .card-bot {
+      margin-top: auto;
     }
   }
 
@@ -83,15 +53,8 @@
   }
 }
 
-.card-img-top {
-  width: 60%;
-}
-
-.card-rail {
-  width: 45%;
-}
-
-.heading-courses {
+.heading-courses,
+.list-title {
   text-align: center;
   font-size: 80px;
   margin: 30px auto;
@@ -100,10 +63,6 @@
   font-family: $font-family-UTM;
   font-weight: 800;
   color: $strong-blue;
-}
-
-.other-courses {
-  margin-top: 3rem;
 }
 
 .course-footer {
@@ -134,12 +93,7 @@
     display: flex;
     flex-direction: row;
 
-    .card-img-left,
-    .card-img-right,
-    .card-img-center,
-    .card-img-left-bot,
-    .card-img-center-bot,
-    .card-img-right-bot {
+    .card-img-top {
       width: 40%;
       height: 100%;
     }
@@ -152,7 +106,7 @@
         margin: 0;
       }
 
-      .btn-success {
+      .button-success {
         width: 60%;
         margin-bottom: 0;
         float: right;
@@ -174,12 +128,7 @@
     display: flex;
     flex-direction: row;
 
-    .card-img-left,
-    .card-img-right,
-    .card-img-center,
-    .card-img-left-bot,
-    .card-img-center-bot,
-    .card-img-right-bot {
+    .card-img-top {
       width: 40%;
       height: 100%;
     }

@@ -20,6 +20,7 @@ class ReviewFactory extends Factory
             'course_id' => $this->faker->randomElement(Course::pluck('id')),
             'review' => $this->faker->realText(150),
             'rate' => $this->faker->numberBetween(0, 5),
+            'language' => $this->faker->word(),
             'created_at' => $this->faker->date(),
             'updated_at' => $this->faker->date()
         ];

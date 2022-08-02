@@ -30,4 +30,11 @@ return [
   'create_new_account' => 'Create New Account',
   'sign_up_hapolearn' => 'Sign up to HapoLearn',
   'sign_in_hapolearn' => 'Sign in to HapoLearn',
+  'take_this_course' => 'Take this Course',
+  'become_a_member' => 'Become a member of our growing community!',
+  'start_learning' => 'Start Learning Now!',
+  'view_all_courses' => 'View All Courses',
+  'statistic' => 'Statistic',
+  'other_courses' => 'Other courses',
+  'feedback' => 'Feedback'
 ];

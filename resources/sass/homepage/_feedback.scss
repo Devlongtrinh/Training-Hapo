@@ -37,6 +37,9 @@
     margin: 1rem auto;
     border-left: 5px solid $gray;
     padding: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -46,6 +49,7 @@
   .user-avatar {
     width: 4rem;
     height: 4rem;
+    border-radius: 50%;
   }
 }
 
