@@ -29,5 +29,11 @@ return [
   'create_new_account' => 'Tạo tài khoản mới',
   'sign_up_hapolearn' => 'Đăng ký tài khoản HapoLearn',
   'sign_in_hapolearn' => 'Đăng nhập tài khoản HapoLearn',
-  'take_this_course' => 'Nhận khóa học này'
+  'take_this_course' => 'Nhận khóa học này',
+  'become_a_member' => 'Trở thành một thành viên trong cộng đồng đang phát triển của chúng tôi!',
+  'start_learning' => 'Bắt đầu học ngay!',
+  'view_all_courses' => 'Tất cả khóa học của chúng tôi',
+  'statistic' => 'Thống kê',
+  'other_courses' => 'Các khóa học khác',
+  'feedback' => 'Phản hồi'
 ];
