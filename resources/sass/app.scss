@@ -7,17 +7,20 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
+@import "~select2/dist/css/select2.css";
 
 // Variables
 @import 'variables';
 
 // Variables
 @import 'homepage/_header';
-@import 'homepage/_login';
-@import 'homepage/_register';
+@import 'authpage/_login';
+@import 'authpage/_register';
 @import 'homepage/_messenger';
 @import 'homepage/_banner';
-@import 'homepage/_course';
+@import 'coursepage/_course';
+@import 'coursepage/_filter';
+@import 'coursepage/_list_course';
 @import 'homepage/_reason';
 @import 'homepage/_feedback';
 @import 'homepage/_statistic';

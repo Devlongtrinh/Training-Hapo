@@ -19,11 +19,11 @@
                     <a class="nav-link" href="{{ route('home') }}">{{ __('artribute.home') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('course') }} ">{{ __('artribute.all_courses') }}</a>
+                    <a class="nav-link" href="{{ route('course.index') }} ">{{ __('artribute.all_courses') }}</a>
                 </li>
                 @if (Auth::check())
                     <li class="nav-item ">
-                        <a class="nav-link" href="profile">{{ __('artribute.profile') }}</a>
+                        <a class="nav-link" href="{{ route('profile') }}">{{ __('artribute.profile') }}</a>
                     </li>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf

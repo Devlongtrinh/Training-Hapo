@@ -62,4 +62,9 @@ class User extends Authenticatable
     {
         return $this->haveMany(Review::class);
     }
+
+    public static function teachers()
+    {
+        return self::where('role', config('roles.teacher'));
+    }
 }

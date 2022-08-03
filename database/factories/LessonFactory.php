@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use DateTime;
+use App\Models\Course;
 
 class LessonFactory extends Factory
 {
@@ -15,11 +16,11 @@ class LessonFactory extends Factory
     public function definition()
     {
         return [
-            'course_id' => $this->faker->numberBetween(0, 100),
+            'course_id' => $this->faker->randomElement(Course::pluck('id')),
             'name' => $this->faker->name(),
             'description' => $this->faker->text(100),
             'tag' => $this->faker->word(),
-            'time' => $this->faker->dateTime()->format('H:i:s'),
+            'time' => $this->faker->datetime()->format('H:m:s'),
             'cost' => $this->faker->numberBetween(1000, 9000),
             'document' => $this->faker->text(50),
             'created_at' => new DateTime(),
