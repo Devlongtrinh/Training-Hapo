@@ -3,7 +3,7 @@ $(function () {
     $('.course-filter').toggleClass('active');
   });
 
-  const radios = $('input[type="radio"]');
+  const radios = $('input');
   checkLabel();
 
   radios.each(function () {

@@ -66,40 +66,41 @@ class Course extends Model
 
     public function scopeSearch($query, $request)
     {
-        if (isset($request['keyword'])) {
-            $query->where('name', 'LIKE', "%" . $request['keyword'] . "%")->orWhere('description', 'LIKE', "%" . $request['keyword'] . "%");
+
+        if (isset($request["keyword"]) && !empty($request["keyword"])) {
+            $query->where('name', 'LIKE', "%{$request["keyword"]}%")->orWhere('description', 'LIKE', "%{$request["keyword"]}%");
         }
 
-        if (isset($request['created_time'])) {
-            $query->orderBy('courses.created_at', $request['created_time']);
+        if (isset($request["created_time"]) && !empty($request["created_time"])) {
+            $query->orderBy('courses.created_at', $request["created_time"]);
         }
 
-        if (isset($request['teachers']) && count($request['teachers']) > 0) {
-            $query->whereHas('users', function ($query) use ($request) {
-                $query->where('users.role', config('roles.teacher'))->whereIn('user_id', $request['teachers']);
-            });
+        if (isset($request["learners"]) && !empty($request["learners"])) {
+            $query->withCount('users')->orderBy('users_count', $request["learners"]);
         }
 
-        if (isset($request['learner']) && !empty($request['learner'])) {
-            $query->withCount('users')->orderBy('users_count', $request['learner']);
+        if (isset($request["learning_time"]) && !empty($request["learning_time"])) {
+            $query->withSum('lessons', 'time')->orderBy('lessons_sum_time', $request["learning_time"]);
         }
 
-        if (isset($request['time']) && !empty($request['time'])) {
-            $query->withSum('lessons', 'time')->orderBy('lessons_sum_times', $request['time']);
+        if (isset($request["countLesson"]) && !empty($request["countLesson"])) {
+            $query->withCount('lessons')->orderBy('lessons_count', $request['countLesson']);
         }
 
-        if (isset($request['lesson']) && !empty($request['lesson'])) {
-            $query->withCount('lessons')->orderBy('lessons_count', $request['lesson']);
+        if (isset($request["rate"]) && !empty($request["rate"])) {
+            $query->withCount('reviews')->orderBy('reviews_count', $request["rate"]);
         }
 
-        if (isset($request['tags']) && count($request['tags']) > 0) {
+        if (isset($request["tags"]) && !empty($request["tags"])) {
             $query->whereHas('tags', function ($query) use ($request) {
-                $query->whereIn('tag_id', $request['tags']);
+                $query->whereIn('tags.id', $request['tags']);
             });
         }
 
-        if (isset($request['rate']) && !empty($request['rate'])) {
-            $query->withCount('reviews')->orderBy('reviews_count', $request['rate']);
+        if (isset($request["teachers"]) && !empty($request["teachers"])) {
+            $query->whereHas('users', function ($query) use ($request) {
+                $query->whereIn('users.id', $request['teachers']);
+            });
         }
 
         return $query;

@@ -97,33 +97,6 @@
   }
 }
 
-.pagination {
-  justify-content: flex-end;
-  gap: 5px;
-
-  .page-item {
-
-    &:first-child .page-link,
-    &:last-child .page-link {
-      border-radius: 5px;
-    }
-
-    .page-link {
-      border-radius: 5px;
-      border: 2px solid $main-color;
-      color: $main-color;
-    }
-  }
-
-  .page-item.active {
-    .page-link {
-      background-color: $main-color;
-      border-color: $main-color;
-      color: white;
-    }
-  }
-}
-
 @media (min-width: 768px) and (max-width: 992px) {
   .course-item .course-main {
     gap: 4px;
