@@ -20,7 +20,7 @@ class LessonFactory extends Factory
             'name' => $this->faker->name(),
             'description' => $this->faker->text(100),
             'tag' => $this->faker->word(),
-            'time' => $this->faker->datetime()->format('H:m:s'),
+            'time' => $this->faker->dateTime()->format('H:i:s'),
             'cost' => $this->faker->numberBetween(1000, 9000),
             'document' => $this->faker->text(50),
             'created_at' => new DateTime(),
