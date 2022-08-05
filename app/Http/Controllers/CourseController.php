@@ -21,6 +21,6 @@ class CourseController extends Controller
         $tags = Tag::get();
         $courses = Course::search($data)->paginate(config('course_home.paginate'));
 
-        return view('course', compact('courses', 'teachers', 'tags', 'data'));
+        return view('courses.index', compact('courses', 'teachers', 'tags', 'data'));
     }
 }

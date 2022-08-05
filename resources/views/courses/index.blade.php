@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="course-home container">
-        <form method="GET" action="{{ route('course.index') }}" class="course-filter">
+        <form method="GET" action="{{ route('courses.index') }}" class="course-filter">
             <div class="main">
                 <div class="btn btn-filter">
                     <i class="fa-solid fa-sliders icon-filter"></i>
@@ -22,12 +22,12 @@
 
                     <div class="col-lg-2dot4 col-md-4 d-flex justify-content-between">
                         <label for="newRadio" class="btn">Mới nhất</label>
-                        <input id="newRadio" type="radio"
+                        <input class="new-radio" id="newRadio" type="radio"
                             @if (isset($data['created_time'])) @if ($data['created_time'] == config('course_home.sort_descending')) {{ 'checked' }} @endif
                         @else {{ 'checked' }} @endif type="radio"
                         name="created_time" value="{{ config('course_home.sort_descending') }}">
                         <label for="oldRadio" class="btn">Cũ nhất</label>
-                        <input id="oldRadio" type="radio" @if (isset($data['created_time']) && $data['created_time'] == config('course_home.sort_ascending')) {{ 'checked' }} @endif
+                        <input class="old-radio" id="oldRadio" type="radio" @if (isset($data['created_time']) && $data['created_time'] == config('course_home.sort_ascending')) {{ 'checked' }} @endif
                             type="radio" name="created_time" value="{{ config('course_home.sort_ascending') }}">
                     </div>
 
@@ -54,9 +54,9 @@
                     <div class="col-lg-2dot4 col-md-4">
                         <select name="countLesson" class="item select">
                             <option value="" class="select-item">Số bài học</option>
-                            <option @if (isset($data['countLesson']) && $data['countLesson'] == config('course_home.sort_ascending')) {{ 'selected' }} @endif
+                            <option @if (isset($data['lesson_counting']) && $data['lesson_counting'] == config('course_home.sort_ascending')) {{ 'selected' }} @endif
                                 value="{{ config('course_home.sort_ascending') }}" class="select-item">Tăng dần</option>
-                            <option @if (isset($data['countLesson']) && $data['countLesson'] == config('course_home.sort_descending')) {{ 'selected' }} @endif
+                            <option @if (isset($data['lesson_counting']) && $data['lesson_counting'] == config('course_home.sort_descending')) {{ 'selected' }} @endif
                                 value="{{ config('course_home.sort_descending') }}" class="select-item">Giảm dần</option>
                         </select>
                     </div>

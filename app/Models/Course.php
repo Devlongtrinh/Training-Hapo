@@ -66,7 +66,6 @@ class Course extends Model
 
     public function scopeSearch($query, $request)
     {
-
         if (isset($request["keyword"]) && !empty($request["keyword"])) {
             $query->where('name', 'LIKE', "%{$request["keyword"]}%")->orWhere('description', 'LIKE', "%{$request["keyword"]}%");
         }
@@ -83,8 +82,8 @@ class Course extends Model
             $query->withSum('lessons', 'time')->orderBy('lessons_sum_time', $request["learning_time"]);
         }
 
-        if (isset($request["countLesson"]) && !empty($request["countLesson"])) {
-            $query->withCount('lessons')->orderBy('lessons_count', $request['countLesson']);
+        if (isset($request["lesson_counting"]) && !empty($request["lesson_counting"])) {
+            $query->withCount('lessons')->orderBy('lessons_count', $request['lesson_counting']);
         }
 
         if (isset($request["rate"]) && !empty($request["rate"])) {
