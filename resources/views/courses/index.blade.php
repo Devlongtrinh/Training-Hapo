@@ -106,7 +106,7 @@
                             </div>
                             <div class="right">
                                 <div class="course-name">{{ $course->name }}</div>
-                                <div class="course-desciption">{{ $course->description }}</div>
+                                <div class="course-description">{{ $course->description }}</div>
                             </div>
                         </div>
                         <div class="course-button">
