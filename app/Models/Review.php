@@ -30,6 +30,6 @@ class Review extends Model
 
     public function scopeMain($query)
     {
-        return $query->take(config('course_list.review_num'))->get();
+        return $query->take(config('course_home.review_num'))->get();
     }
 }

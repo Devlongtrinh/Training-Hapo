@@ -1,0 +1,170 @@
+.col-2dot4,
+.col-sm-2dot4,
+.col-md-2dot4,
+.col-lg-2dot4,
+.col-xl-2dot4 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 19px;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.col-2dot4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+@media (min-width: 540px) {
+  .col-sm-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 720px) {
+  .col-md-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 960px) {
+  .col-lg-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 1140px) {
+  .col-xl-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.course-filter .main {
+  display: flex;
+  gap: 14px;
+  margin-top: 1rem;
+
+  .btn {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .btn-filter {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: white;
+    border: 1px solid $bg-c4c4;
+    color: $gray;
+
+    .icon-filter {
+      font-size: 14px;
+    }
+  }
+
+  .btn-search {
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    color: white;
+  }
+
+  .search {
+    width: 30%;
+    position: relative;
+
+    input {
+      padding-right: 40px;
+    }
+
+    .icon-search {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $gray;
+    }
+  }
+}
+
+.course-filter .sub {
+  display: none;
+  align-items: center;
+  background-color: white;
+  padding: 14px;
+  border: 1px solid $bg-c4c4;
+  border-radius: 5px;
+
+  .title {
+    display: inline-block;
+    color: $gray;
+    margin-right: 14px;
+    font-weight: 700;
+  }
+
+  .group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .btn {
+      background-color: $bg-e5e6;
+      border-radius: 2px;
+      color: $gray;
+      border: 0;
+      outline: 0;
+      margin-bottom: 0;
+    }
+
+    .btn.active {
+      background-color: $main-color;
+      color: white;
+    }
+
+    .item {
+      width: 177px;
+      color: $gray;
+      margin-top: 10px;
+    }
+
+    .new-radio, .old-radio {
+      display: none;
+    }
+  }
+}
+
+.course-filter.active .sub {
+  display: flex;
+}
+
+.select {
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid $bg-e5e6;
+  background-color: white;
+  cursor: pointer;
+}
+
+.select2-search--dropdown {
+  display: none;
+}
+
+.select2-container {
+  width: 100%;
+}

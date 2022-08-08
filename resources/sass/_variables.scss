@@ -35,6 +35,9 @@ $ocean-blue: #1B75BB;
 $message-white: #F1F0F0;
 $footer-color: #454545;
 $register-bg: #f2f2f2;
+$bg-c4c4: #c4c4c4;
+$bg-e5e6: #E5E6E7;
+$bg-f0f0: #F0F0F0;
 
 .main-button {
   background-color: $main-color;
@@ -46,4 +49,6 @@ $register-bg: #f2f2f2;
 
 main {
   min-height: 54vh;
+  background-color: $bg-e5e6;
+  padding: 40px 0;
 }
