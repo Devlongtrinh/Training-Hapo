@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  $('.js-example-basic-multiple').select2();
-  $('.js-example-basic-single').select2();
-  $(".js-example-responsive").select2({
+  $('.js-basic-multiple').select2();
+  $('.js-basic-single').select2();
+  $(".js-responsive").select2({
     width: 'resolve'
 });
 })
