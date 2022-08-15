@@ -25,8 +25,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('/courses', CourseController::class)->only(['index', 'show']);
 Route::get('/profile', [UserController::class, 'profile'])->name('profile')->middleware('auth');
 Route::group(['middleware' => 'auth'], function () {
-   Route::resource('/course-user', CourseUserController::class)->only(['store'])->middleware('canJoin');
-   Route::resource('/course-user', CourseUserController::class)->only(['destroy', 'update']);
-   Route::resource('/reviews', ReviewController::class)->only(['store'])->middleware('canReview');
-   Route::resource('/reviews', ReviewController::class)->only(['destroy', 'update']);
+  Route::resource('/course-user', CourseUserController::class)->only(['store'])->middleware('canJoin');
+  Route::resource('/course-user', CourseUserController::class)->only(['destroy', 'update']);
+  Route::resource('/reviews', ReviewController::class)->only(['store'])->middleware('canReview');
+  Route::resource('/reviews', ReviewController::class)->only(['destroy', 'update']);
 });
