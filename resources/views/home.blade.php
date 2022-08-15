@@ -62,7 +62,8 @@
                                 <p class="card-text">{{ $course->description }}</p>
                             </div>
                             <div class="card-bot">
-                                <a href="#" class="buttton button-success">{{ __('artribute.take_this_course') }}</a>
+                                <a href="{{ route('courses.show', [$course->id]) }}"
+                                    class="btn btn-primary">{{ __('artribute.take_this_course') }}</a>
                             </div>
                         </div>
                     </div>
@@ -87,14 +88,15 @@
                                 <p class="card-text">{{ $course->description }}</p>
                             </div>
                             <div class="card-bot">
-                                <a href="#" class="buttton button-success">{{ __('artribute.take_this_course') }}</a>
+                                <a href="{{ route('courses.show', [$course->id]) }}"
+                                    class="btn btn-primary">{{ __('artribute.take_this_course') }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
             <div class="course-footer">
-                <span class="course-text">{{ __('artribute.view_all_courses') }}</span>
+                <a href="{{ route('courses.index') }}" class="course-text">{{ __('artribute.view_all_courses') }}</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </div>
         </div>

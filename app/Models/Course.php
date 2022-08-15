@@ -51,7 +51,7 @@ class Course extends Model
 
     public function getLearnersAttribute()
     {
-        return $this->users()->count();
+        return $this->users()->where('role', config('roles.user'))->count();
     }
 
     public function getLessonsAttribute()
@@ -61,7 +61,76 @@ class Course extends Model
 
     public function getTimesAttribute()
     {
-        return $this->lessons()->sum('time');
+        return ($this->lessons()->sum('time') == 0) ? 0 : $this->lessons()->sum('time');
+    }
+
+    public function getCostsAttribute()
+    {
+        return ($this->cost == 0) ? __('artribute.free') : $this->cost;
+    }
+
+    public function getZeroStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 0)->count();
+    }
+
+    public function getOneStarAttribute()
+    {
+        return $this->reviews()->where('rate', 1)->count();
+    }
+
+    public function getTwoStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 2)->count();
+    }
+
+    public function getThreeStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 3)->count();
+    }
+
+    public function getFourStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 4)->count();
+    }
+
+    public function getFiveStarsAttribute()
+    {
+        return $this->reviews()->where('rate', 5)->count();
+    }
+
+    public function getIsJoinedAttribute($query)
+    {
+        return auth()->check() && $this->users()->whereExists(function ($query) {
+            $query->where('users.id', auth()->id());
+        })->count();
+    }
+
+    public function getIsReviewedAttribute()
+    {
+        return auth()->check() && $this->reviews()->whereExists(function ($query) {
+            $query->where('user_id', auth()->id());
+        })->count();
+    }
+
+    public function getIsFinishedAttribute()
+    {
+        return auth()->check() && $this->where('id', $this->id)->whereHas('users', function ($query) {
+            $query->where('users.id', auth()->id())->where('course_user.deleted_at', '<>', 'null');
+        })->exists();
+    }
+
+    public function getExperienceAttribute()
+    {
+        return Carbon::parse($this['created_at'])->diff(Carbon::now())->format('%y');
+    }
+
+    public function getAveragesAttribute()
+    {
+        $sum = $this->reviews->sum('rate');
+        $total = $this->reviews->count();
+
+        return $total == 0 ? 0 : round($sum / $total, 1);
     }
 
     public function scopeSearch($query, $request)

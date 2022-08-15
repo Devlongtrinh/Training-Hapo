@@ -28,8 +28,23 @@ class Review extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
     public function scopeMain($query)
     {
         return $query->take(config('course_home.review_num'))->get();
+    }
+
+    public function isYourReview()
+    {
+        return auth()->check() && auth()->id() == $this->user->id;
+    }
+
+    public function canUpdateReview()
+    {
+        return $this['user_id'] == auth()->id();
     }
 }

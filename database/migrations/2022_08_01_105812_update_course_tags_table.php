@@ -25,6 +25,8 @@ class UpdateCourseTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropColumn('deleted_at');
+        Schema::table('course_tag', function (Blueprint $table) {
+            $table->dropColumn('deleted_at');
+        });
     }
 }

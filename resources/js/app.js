@@ -11,6 +11,9 @@ require('./messenger');
 require('./feedback');
 require('./filter');
 require('./select2');
+require('./comment');
+require('./rate');
+require('./review');
 window.Vue = require('vue').default;
 
 /**

@@ -23,4 +23,23 @@ class CourseController extends Controller
 
         return view('courses.index', compact('courses', 'teachers', 'tags', 'data'));
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request, $id)
+    {
+        $data = $request->all();
+        $others = Course::other()->get();
+        $course = Course::find($id);
+        $lessons = $course->lessons()->search($request->all())->paginate(config('lesson.paginate'), ['*'], 'lesson')->appends(['tab' => 'lesson']);
+        $teachers = $course->users()->teachers()->get();
+        $tags = $course->tags;
+        $reviews = $course->reviews()->orderBy('created_at', config('course_home.sort_descending'))->get();
+
+        return view('courses.show', compact('course', 'lessons', 'teachers', 'tags', 'others', 'reviews'));
+    }
 }

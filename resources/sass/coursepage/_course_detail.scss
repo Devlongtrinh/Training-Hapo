@@ -1,0 +1,977 @@
+.shadow-sm {
+  display: none;
+}
+
+.main {
+  margin-top: 0;
+}
+
+.course-home {
+  padding: 40px 0;
+}
+
+.course-detail,
+.lesson-detail {
+  padding: 35px 0 110px;
+  font-family: $font-family-UTM;
+  background-color: white;
+
+  .btn {
+    background-color: $green;
+    border-radius: 22px;
+    box-shadow: inset 0px 1.5px 2px $main-color;
+    border: 0;
+    color: $white;
+  }
+
+  .lessons-join {
+    padding: 10px 45px;
+  }
+
+  .lessons-join.active {
+    background-color: $leaf-green;
+    cursor: auto;
+  }
+
+  .row {
+    align-items: flex-start;
+  }
+
+  .main {
+    .course-img {
+      width: 100%;
+      height: 440px;
+      border-radius: 10px;
+    }
+
+    .group {
+      margin-top: 30px;
+      padding: 18px;
+      background-color: white;
+      border-radius: 10px;
+    }
+  }
+
+  .main .group {
+    .group-title {
+      display: flex;
+      gap: 80px;
+      border-bottom: 2px solid $white;
+    }
+
+    .title-link {
+      color: $gray;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      padding-bottom: 18px;
+      cursor: pointer;
+    }
+
+    .title-link.active {
+      position: relative;
+      color: $green;
+    }
+
+    .title-link.active::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: $green;
+    }
+  }
+
+  .main .lessons {
+    .pagination {
+      margin-top: 16px;
+    }
+
+    .lessons-action {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 0;
+      align-items: center;
+      border-bottom: 1px solid $white;
+    }
+
+    .lessons-action .btn {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .lessons-search {
+      display: flex;
+      position: relative;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .lessons-search-btn {
+      border-radius: 5px;
+      box-shadow: none;
+    }
+
+    .lessons-search input {
+      border: 1px solid $light-gray;
+      border-radius: 5px;
+      padding-left: 10px;
+    }
+
+    .lesson {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      align-items: center;
+      border-bottom: 1px solid $white;
+    }
+
+    .lesson-content {
+      display: flex;
+      font-weight: 700;
+      font-size: 18px;
+      align-items: flex-start;
+    }
+
+    .lesson-num {
+      margin-right: 20px;
+    }
+
+    .lesson-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  .main .teachers {
+    .teacher+.teacher {
+      margin-top: 60px;
+    }
+
+    .teachers-title {
+      font-size: 25px;
+      font-weight: 700;
+      margin: 30px 0;
+    }
+
+    .teacher-information {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    .teacher-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .teacher-experience,
+    .teacher-about {
+      font-weight: 400;
+    }
+
+    .teacher-name {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 17px;
+    }
+
+    .teacher-experience {
+      font-size: 14px;
+      color: $pb-color;
+    }
+
+    .teacher-about {
+      font-size: 18px;
+      margin-top: 14px;
+      color: $pb-color;
+      text-align: justify;
+    }
+
+    .teacher-socials {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .teacher-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    .teacher-google,
+    .teacher-slack {
+      color: $google-red;
+      border: 1px solid $google-red;
+    }
+
+    .teacher-facebook {
+      color: $facebook-blue;
+      border: 1px solid $facebook-blue;
+    }
+  }
+
+  .main .reviews {
+    color: $gray;
+
+    .reviews-total {
+      font-size: 25px;
+      font-weight: 700;
+      margin: 30px 0;
+      border-bottom: 1px solid white;
+    }
+
+    .reviews-evaluate {
+      display: flex;
+      gap: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid white;
+
+      .left,
+      .right {
+        padding: 11px 16px;
+        border-radius: 5px;
+      }
+
+      .left {
+        padding-top: 5%;
+        flex: 1;
+      }
+
+      .right {
+        flex: 2;
+      }
+    }
+
+    .reviews-evaluate .left {
+      text-align: center;
+      background-color: $gray;
+
+      .fa-star-half-stroke::before {
+        content: "";
+        color: $light-orange;
+      }
+
+      .star-icon {
+        color: white;
+      }
+
+      .star-icon.active {
+        color: $light-orange;
+      }
+
+      .reviews-num,
+      .reviews-ratings {
+        font-weight: 700;
+        color: white;
+      }
+
+      .reviews-num {
+        font-size: 60px;
+      }
+
+      .reviews-ratings {
+        font-size: 16px;
+      }
+    }
+
+    .reviews-evaluate .right {
+      .reviews-item+.reviews-item {
+        margin-top: 12px;
+      }
+
+      .reviews-item {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+      .reviews-item-label {
+        font-weight: 700;
+        font-size: 16px;
+        min-width: 50px;
+      }
+
+      .reviews-item-hr {
+        flex: 1;
+        height: 6px;
+        background-color: white;
+        border-radius: 2px;
+        transform: translateY(2px);
+      }
+
+      .reviews-item-num {
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .reviews-item.active .reviews-item-hr {
+        background-color: $green;
+      }
+    }
+
+    .show-all {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 25px 0;
+      cursor: pointer;
+
+      .down-icon {
+        font-size: 12px;
+      }
+    }
+
+    .comment {
+      border-bottom: 1px solid $message-white;
+
+      .replies {
+        margin-left: 80px;
+        border-top: 1px solid $message-white;
+        padding: 20px 0;
+      }
+
+      .replies .reply-input {
+        width: 100%;
+        border: 1px solid white;
+        border-radius: 8px;
+        padding: 4px 8px;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $gray;
+        }
+      }
+
+      .form-edit-comment {
+        position: relative;
+        display: none;
+        width: 100%;
+        margin: 25px 0;
+
+
+      }
+
+      .form-edit-reply {
+        position: relative;
+        display: none;
+        width: 100%;
+        margin: 25px 0;
+
+        .edit-reply {
+          width: 100%;
+          background: white;
+          border: 1px solid $white;
+          border-radius: 5px;
+          padding: 16px 26px 16px 16px;
+        }
+      }
+
+      .edit-submit {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: 15px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+      }
+
+      .edit-submit:hover {
+        color: $green;
+      }
+
+      .form-reply {
+        div {
+          position: relative;
+        }
+
+        .reply-submit {
+          position: absolute;
+          right: 0px;
+          bottom: -50%;
+          transform: translateY(-21%);
+          padding: 15px;
+          background-color: transparent;
+          border: 0;
+          opacity: 0.6;
+        }
+
+        .reply-submit:hover {
+          cursor: pointer;
+          opacity: 1;
+          color: $green;
+        }
+      }
+
+      .edit-select {
+        display: flex;
+      }
+
+      .edit-select .edit-select-item {
+        font-size: 12px;
+        opacity: 0.6;
+
+        button {
+          padding: 10px;
+          border: 0;
+          background-color: transparent;
+        }
+
+        &:hover button {
+          color: $green;
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+
+      .edit-select .edit-select-item:hover {
+        color: $green;
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+
+  .comment+.comment {
+    margin-top: 25px;
+  }
+
+  .comment-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .right {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .user-name {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .user-time {
+      font-weight: 400;
+      font-size: 14px;
+      color: $gray;
+    }
+
+    .star-icon {
+      font-size: 13px;
+    }
+
+    .star-icon.active {
+      color: $light-orange;
+    }
+  }
+
+  .comment-content {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 25px 0;
+    color: $gray;
+    margin: 0;
+  }
+
+  .leave-review {
+    display: flex;
+    flex-direction: column;
+
+    .invalid-feedback {
+      font-size: 16px;
+    }
+
+    .btn.done {
+      opacity: 0.6;
+      cursor: auto;
+    }
+
+    button {
+      margin-left: auto;
+    }
+  }
+
+  .leave-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 25px 0;
+  }
+
+  .leave-label {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    color: #747474;
+    margin-bottom: 10px;
+  }
+
+  .leave-input,
+  .edit-comment {
+    width: 100%;
+    background: white;
+    border: 1px solid $white;
+    border-radius: 5px;
+    padding: 16px;
+  }
+
+  .rate {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+
+    p {
+      color: $footer-color;
+      margin: 0;
+    }
+  }
+
+  .rate-label {
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .btn {
+    padding: 6px 41px;
+  }
+
+  .rate-stars {
+    cursor: pointer;
+  }
+
+  .rate-stars .star-icon {
+    color: $white;
+    cursor: pointer;
+  }
+
+  .rate-stars .star-icon.active {
+    color: $light-orange;
+  }
+}
+
+
+.side-bar .side-bar-item {
+  padding: 0 17px 10px;
+  background: white;
+  border: 1px solid $light-gray;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $register-bg;
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $green;
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+}
+
+.side-bar-item+.side-bar-item {
+  margin-top: 30px;
+}
+
+.side-bar .course-description {
+  height: 440px;
+  overflow: auto;
+
+  .title {
+    font-weight: 700;
+    font-size: 25px;
+    border-bottom: 1px solid $green;
+    line-height: 60px;
+  }
+
+  .content {
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.side-bar .course-information {
+  padding: 0 0 10px 17px;
+  max-height: 440px;
+  overflow: auto;
+
+
+}
+
+.side-bar .course-information-row {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: 26px 0;
+  border-bottom: 1px solid $light-gray;
+
+  .title {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    min-width: 140px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .content {
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .course-exit {
+    font-size: 18px;
+    font-weight: 700;
+    margin: -8px auto;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .finish-course {
+    padding: 10px 50px;
+    font-size: 20px;
+  }
+}
+
+.side-bar .course-information-row:last-child {
+  border: 0;
+}
+
+.side-bar .other-course {
+  padding: 0;
+  border-top: 0;
+
+  .content {
+    padding: 0 17px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 14px 0;
+    text-align: center;
+    background-color: $green;
+    color: white;
+  }
+
+  .other-course-row {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 19px;
+    align-items: flex-start;
+    border-bottom: 1px solid $white;
+    color: $gray;
+    text-decoration: none;
+  }
+
+  .other-course-row:hover {
+    color: $green;
+  }
+
+  .other-course-row:last-child {
+    border: 0;
+  }
+
+  .view-all {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 18px auto;
+  }
+}
+
+.side-bar .course-description.hidden {
+  display: none;
+}
+
+.side-bar .other-course.hidden {
+  display: none;
+}
+
+
+@media (max-width: 1200px) {
+  .course-detail .main .lessons .lessons-filter {
+    flex-direction: column;
+    gap: 20px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .course-detail .main .lessons .lessons-search {
+    width: 100%;
+
+    input {
+      flex: 1;
+    }
+  }
+
+
+  .course-detail .side-bar .course-description {
+    max-height: 368px;
+
+    .title {
+      line-height: 30px;
+      padding: 20px 0;
+    }
+
+    .content {
+      font-size: 16px;
+    }
+  }
+
+  .course-detail .side-bar .course-information {
+    max-height: 368px;
+    overflow: auto;
+  }
+
+  .course-detail .side-bar .course-information-row {
+
+    .title,
+    .content {
+      font-size: 18px;
+    }
+
+    .title {
+      min-width: 115px;
+    }
+  }
+
+  .course-detail .main .group .group-title {
+    gap: 54px;
+  }
+}
+
+@media (max-width: 992px) {
+  .lessons-action {
+    flex-wrap: wrap;
+
+    form {
+      width: 100%;
+      position: relative;
+    }
+
+    .form-join {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .course-detail .side-bar .course-description,
+  .course-detail .side-bar .course-information {
+    max-height: 273px;
+  }
+
+  .course-detail .side-bar .course-description {
+    .title {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 16px 0;
+    }
+
+    .content {
+      font-size: 15px;
+    }
+  }
+
+  .course-detail .side-bar .other-course {
+    .title {
+      font-size: 20px;
+    }
+
+    .other-course-row {
+      font-size: 15px;
+    }
+
+    .view-all {
+      font-size: 16px;
+    }
+  }
+
+  .course-detail .side-bar .course-information-row {
+    padding: 14px 0;
+
+    .title,
+    .content {
+      font-size: 16px;
+    }
+
+    .title {
+      min-width: 96px;
+    }
+  }
+
+  .course-detail .main .lessons .lesson-content {
+    font-size: 16px;
+  }
+
+  .course-detail .main .reviews .comment-user {
+    .user-name {
+      font-size: 16px;
+    }
+
+    .star-icon {
+      font-size: 10px;
+    }
+
+    .user-time {
+      font-size: 12px;
+      transform: translateY(1px);
+    }
+  }
+
+  .course-detail .main .reviews .comment-content {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  .other-course .other-course-row {
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .side-bar {
+    margin-top: 30px;
+  }
+
+  .course-detail .reviews-evaluate {
+    flex-direction: column;
+  }
+
+  .course-detail .comment-user {
+    .left {
+      gap: 10px;
+    }
+
+    .user-time {
+      display: none;
+    }
+  }
+
+  .course-detail .main .reviews .comment .replies {
+    margin-left: 20px;
+  }
+
+  .course-detail .course-description,
+  .course-detail .course-information {
+    max-height: max-content;
+  }
+}
+
+@media (max-width: 380px) {
+  .course-detail .main .course-img {
+    height: 200px;
+  }
+
+  .course-detail .lessons .lessons-filter {
+    .btn {
+      padding: 5px;
+    }
+  }
+
+  .course-detail .comment-user {
+    .left {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .user-time {
+      display: none;
+    }
+  }
+
+  .course-detail .teachers .teacher-about {
+    font-size: 16px;
+  }
+
+  .course-detail .lessons .lessons-search {
+    flex-direction: column;
+  }
+
+  .course-detail .group .group-title {
+    gap: 20px;
+  }
+
+  .course-detail .lessons .lesson {
+    flex-direction: column;
+
+    .lesson-btn {
+      width: 60%;
+    }
+  }
+
+  .course-detail .lessons .lesson-content {
+    flex-direction: column;
+
+    .lesson-num {
+      width: 100%;
+      text-align: center;
+    }
+
+    .lesson-name {
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  .course-detail .group .title-link {
+    font-size: 16px;
+  }
+
+  .course-detail .main .group .group-title {
+    display: flex;
+    flex-direction: column;
+  }
+}

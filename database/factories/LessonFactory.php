@@ -21,7 +21,6 @@ class LessonFactory extends Factory
             'description' => $this->faker->text(100),
             'tag' => $this->faker->word(),
             'time' => $this->faker->dateTime()->format('H:i:s'),
-            'cost' => $this->faker->numberBetween(1000, 9000),
             'document' => $this->faker->text(50),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime()

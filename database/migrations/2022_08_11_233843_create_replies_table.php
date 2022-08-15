@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateCourseUsersTable extends Migration
+class CreateRepliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class UpdateCourseUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('course_user', function (Blueprint $table) {
+        Schema::create('replies', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('review_id');
+            $table->longText('reply')->nullable();
+            $table->timestamps();
             $table->softDeletes();
         });
     }
@@ -25,8 +30,6 @@ class UpdateCourseUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('course_user', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
-        });
+        Schema::dropIfExists('replies');
     }
 }
