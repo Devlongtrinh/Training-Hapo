@@ -21,7 +21,7 @@ class ReviewController extends Controller
             'course_id' => $request['course_id'],
             'user_id' => auth()->user()->id,
             'rate' => $request['rate'],
-            'review' => $request['comment'],
+            'review' => $request['review'],
         ];
         Review::create($data);
         return redirect()->route('courses.show', [$request['course_id']]);
@@ -38,7 +38,7 @@ class ReviewController extends Controller
     {
         $review = Review::find($id);
         if ($review->canUpdateReview($request)) {
-            $review['review'] = $request('comment');
+            $review['review'] = $request('review');
             $review->save();
         }
         return redirect()->route('courses.show', [$request['course_id']]);

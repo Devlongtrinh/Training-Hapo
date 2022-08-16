@@ -25,7 +25,7 @@ class ReviewRequest extends FormRequest
     {
         return [
             'course_id' => 'required|integer',
-            'comment' => 'required',
+            'review' => 'required',
             'rate' => 'required|integer|between:1,5',
         ];
     }
@@ -34,7 +34,7 @@ class ReviewRequest extends FormRequest
     {
         return [
             'course_id' => __('artribute.course_id'),
-            'comment' => __('artribute.comment'),
+            'review' => __('artribute.review'),
             'rate' => __('artribute.Rate'),
         ];
     }

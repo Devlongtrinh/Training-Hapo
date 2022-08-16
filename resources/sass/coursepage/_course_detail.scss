@@ -337,7 +337,7 @@
       }
     }
 
-    .comment {
+    .review {
       border-bottom: 1px solid $message-white;
 
       .replies {
@@ -358,7 +358,7 @@
         }
       }
 
-      .form-edit-comment {
+      .form-edit-review {
         position: relative;
         display: none;
         width: 100%;
@@ -448,11 +448,11 @@
     }
   }
 
-  .comment+.comment {
+  .review+.review {
     margin-top: 25px;
   }
 
-  .comment-user {
+  .review-user {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -495,7 +495,7 @@
     }
   }
 
-  .comment-content {
+  .review-content {
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
@@ -537,7 +537,7 @@
   }
 
   .leave-input,
-  .edit-comment {
+  .edit-review {
     width: 100%;
     background: white;
     border: 1px solid $white;
@@ -857,7 +857,7 @@
     font-size: 16px;
   }
 
-  .course-detail .main .reviews .comment-user {
+  .course-detail .main .reviews .review-user {
     .user-name {
       font-size: 16px;
     }
@@ -872,7 +872,7 @@
     }
   }
 
-  .course-detail .main .reviews .comment-content {
+  .course-detail .main .reviews .review-content {
     font-size: 16px;
     padding: 12px 0;
   }
@@ -891,7 +891,7 @@
     flex-direction: column;
   }
 
-  .course-detail .comment-user {
+  .course-detail .review-user {
     .left {
       gap: 10px;
     }
@@ -901,7 +901,7 @@
     }
   }
 
-  .course-detail .main .reviews .comment .replies {
+  .course-detail .main .reviews .review .replies {
     margin-left: 20px;
   }
 
@@ -922,7 +922,7 @@
     }
   }
 
-  .course-detail .comment-user {
+  .course-detail .review-user {
     .left {
       flex-direction: column;
       gap: 0;

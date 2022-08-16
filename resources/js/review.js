@@ -1,27 +1,38 @@
 $(document).ready(function () {
-  $('.js-btn-review').on('click', function (e) {
-    $(this).closest('.comment').find(".reply").focus();;
-  });
-
-  $('.js-btn-reply').on('click', function (e) {
-    $(this).closest('.reply').find(".reply").focus();;
-  });
-
-  $('.js-btn-edit-review').on('click', function (e) {
-    let commentContent = $(this).closest('.comment').find(".comment-content");
-    let editComment = $(this).closest('.comment').find(".edit-comment");
-    commentContent.toggle();
-    $(this).closest('.comment').find(".form-edit-comment").toggle();
-    editComment.focus();
-    editComment.text(commentContent.text());
-  })
-
-  $('.js-btn-edit-reply').on('click', function (e) {
-    let replyContent = $(this).closest('.reply').find(".reply-content");
-    let editReply = $(this).closest('.reply').find(".edit-reply");
-    replyContent.toggle();
-    $(this).closest('.reply').find(".form-edit-reply").toggle();
-    editReply.focus();
-    editReply.text(reply.text());
-  })
+    hideData();
+    toggleData();
 });
+
+var checkOpen = true;
+
+function hideData() {
+    let reviews = $(".reviews .review");
+    $(reviews).each(function (index) {
+        if (index > 1) {
+            $(this).hide();
+        }
+    });
+}
+
+function toggleData() {
+    $(document).on("click", "#showAllComments", function (e) {
+        let reviews = $(".reviews .review");
+        if (!checkOpen) {
+            $(reviews).each(function (index) {
+                if (index > 1) {
+                    $(this).hide();
+                }
+            });
+            $(this).find(".down-icon").addClass("fa-caret-right");
+            $(this).find(".down-icon").removeClass("fa-caret-down");
+        } else {
+            $(reviews).each(function () {
+                $(this).show();
+            });
+            $(this).find(".down-icon").removeClass("fa-caret-right");
+            $(this).find(".down-icon").addClass("fa-caret-down");
+        }
+
+        checkOpen = !checkOpen;
+    });
+}

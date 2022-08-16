@@ -1,8 +1,8 @@
-<div class="comments" id="comments">
+<div class="reviews" id="reviews">
 
     @foreach ($reviews as $review)
-        <div class="comment" id="form-{{ $review->id }}">
-            <div class="comment-user">
+        <div class="review" id="form-{{ $review->id }}">
+            <div class="review-user">
                 <div class="left">
                     <img src=" {{ $review->user->avatar }}" alt="" class="user-avatar">
                     <div class="user-name">
@@ -41,19 +41,19 @@
                     @endif
                 </div>
             </div>
-            <p class="comment-content">{{ $review->review }}</p>
-            <form class="form-edit-comment" action="{{ route('reviews.update', [$review->id]) }}" method="POST">
+            <p class="review-content">{{ $review->review }}</p>
+            <form class="form-edit-review" action="{{ route('reviews.update', [$review->id]) }}" method="POST">
                 @csrf
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="course_id" value="{{ $course->id }}">
-                <textarea class="edit-comment" name="comment" id="" cols="30" rows="3"></textarea>
+                <textarea class="edit-review" name="review" id="" cols="30" rows="3"></textarea>
                 <button type="submit" class="edit-submit fa-solid fa-paper-plane"></button>
             </form>
             <div class="replies">
                 @foreach ($review->replies as $reply)
                     <div class="reply" id="form-30">
 
-                        <div class="comment-user">
+                        <div class="review-user">
                             <div class="left">
                                 <img src="{{ $reply->user->avatar }}" alt="" class="user-avatar">
                                 <div class="user-name">
@@ -87,7 +87,7 @@
                             @csrf
                             <input type="hidden" name="_method" value="PUT">
                             <input type="hidden" name="user_id" value="{{ $user->id }}">
-                            <textarea class="edit-reply" name="comment" id="" cols="30" rows="2"></textarea>
+                            <textarea class="edit-reply" name="review" id="" cols="30" rows="2"></textarea>
                             <button type="submit" class="edit-submit fa-solid fa-paper-plane"></button>
                         </form>
                     </div>
@@ -109,8 +109,8 @@
             @csrf
             <div class="leave-title">{{ __('artribute.leave_a_review') }}</div>
             <label class="leave-label" for="">{{ __('artribute.message') }}</label>
-            <textarea class="leave-input @error('comment') is-invalid @enderror" name="comment" id="" rows="5">{{ old('comment') }}</textarea>
-            @error('comment')
+            <textarea class="leave-input @error('review') is-invalid @enderror" name="review" id="" rows="5">{{ old('review') }}</textarea>
+            @error('review')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
