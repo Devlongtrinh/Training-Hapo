@@ -25,6 +25,8 @@ class UpdateLessonUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropColumn('deleted_at');
+        Schema::table('lesson_user', function (Blueprint $table) {
+            $table->dropColumn('deleted_at');
+        });
     }
 }
