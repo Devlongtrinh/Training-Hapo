@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             CourseTagTableSeeder::class,
             LessonUserTableSeeder::class,
             CourseUserTableSeeder::class,
+            RepliesTableSeeder::class,
         ]);
     }
 }

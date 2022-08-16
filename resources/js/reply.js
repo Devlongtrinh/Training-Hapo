@@ -8,7 +8,7 @@ $(document).ready(function () {
   });
 
   $('.js-btn-edit-review').on('click', function (e) {
-    let reviewContent = $(this).closest('.Review').find(".review-content");
+    let reviewContent = $(this).closest('.review').find(".review-content");
     let editReview = $(this).closest('.review').find(".edit-review");
     reviewContent.toggle();
     $(this).closest('.review').find(".form-edit-review").toggle();

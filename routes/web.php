@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CourseUserController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ReplyController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -29,4 +30,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/course-user', CourseUserController::class)->only(['destroy', 'update']);
     Route::resource('/reviews', ReviewController::class)->only(['store'])->middleware('canReview');
     Route::resource('/reviews', ReviewController::class)->only(['destroy', 'update']);
+    Route::resource('/replies', ReplyController::class)->only(['store', 'destroy', 'update']);
 });

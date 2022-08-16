@@ -146,7 +146,7 @@
                             <div class="show-all" id="showAllComments"> {{ __('artribute.show_all_comments') }}
                                 <i class="down-icon fa-solid fa-caret-right"></i>
                             </div>
-                            {{-- @include('components.review') --}}
+                            @include('components.review')
                         </div>
                     </div>
 

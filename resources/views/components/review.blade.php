@@ -86,21 +86,22 @@
                             method="POST">
                             @csrf
                             <input type="hidden" name="_method" value="PUT">
-                            <input type="hidden" name="user_id" value="{{ $user->id }}">
+                            <input type="hidden" name="user_id" value="{{ $reply->user->id }}">
                             <textarea class="edit-reply" name="review" id="" cols="30" rows="2"></textarea>
                             <button type="submit" class="edit-submit fa-solid fa-paper-plane"></button>
                         </form>
                     </div>
+                    <form class="form-reply" method="POST" action="{{ route('replies.store') }}">
+                        @csrf
+                        <input type="hidden" name="review_id" value="{{ $review->id }}">
+                        <input type="hidden" name="user_id" value="{{ $reply->user->id }}">
+                        <div>
+                            <input type="text" name="content" class="reply-input" placeholder="Your comment..."
+                                required>
+                            <button type="submit" class="reply-submit fa-solid fa-paper-plane"></button>
+                        </div>
+                    </form>
                 @endforeach
-                <form class="form-reply" method="POST" action="{{ route('replies.store') }}">
-                    @csrf
-                    <input type="hidden" name="review_id" value="{{ $review->id }}">
-                    <input type="hidden" name="user_id" value="{{ $user->id }}">
-                    <div>
-                        <input type="text" name="content" class="reply-input" placeholder="Your comment..." required>
-                        <button type="submit" class="reply-submit fa-solid fa-paper-plane"></button>
-                    </div>
-                </form>
             </div>
         </div>
     @endforeach

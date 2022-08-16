@@ -21,7 +21,7 @@ class ReplyController extends Controller
             'reply' => $request['reply'],
         ];
         Reply::create($data);
-        return redirect()->route('courses.show', [$request['course_id']]);
+        return redirect()->route('courses.show', [$request['user_id']]);
     }
 
     /**
@@ -38,7 +38,7 @@ class ReplyController extends Controller
             $reply['reply'] = $request['review'];
             $reply->save();
         }
-        return redirect()->route('courses.show', [$request['course_id']]);
+        return redirect()->route('courses.show', [$request['user_id']]);
     }
 
     /**
